@@ -8,7 +8,7 @@ const youtube = axios.create({
 
 const params = {
   part: 'snippet',
-  maxResults: 40,
+  maxResults: 20,
   key: KEY,
   regionCode: 'JP',
   type: 'video',
@@ -27,6 +27,15 @@ export const fetchSelectedData = async (id) => {
     params: {
       ...params,
       id,
+    },
+  });
+};
+
+export const fetchRelatedData = async (id) => {
+  return await youtube.get('/search', {
+    params: {
+      ...params,
+      relatedToVideoId: id,
     },
   });
 };

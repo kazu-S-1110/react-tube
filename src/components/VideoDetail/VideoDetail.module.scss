@@ -1,0 +1,14 @@
+.wrap {
+  flex-grow: 2;
+  padding: 1rem;
+  p {
+    color: rebeccapurple;
+  }
+  pre {
+    color: rebeccapurple;
+    line-height: 1.8rem;
+    overflow: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+}
